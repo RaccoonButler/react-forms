@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const SignUpForm = () => {
+const SignUpForm = ({ setToken }) => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState(null);
@@ -8,7 +8,15 @@ const SignUpForm = () => {
   async function handleSubmit(event) {
     event.preventDefault();
     console.log("Hello 👋");
-  }
+
+  const apiResponse = {
+    token: 'example_token_value'
+  };
+
+  const { token } = apiResponse;
+
+  setToken(token);
+}
 
   return (
     <div>
