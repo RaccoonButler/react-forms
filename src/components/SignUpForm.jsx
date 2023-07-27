@@ -9,14 +9,14 @@ const SignUpForm = ({ setToken }) => {
     event.preventDefault();
     console.log("Hello 👋");
 
-  const apiResponse = {
-    token: 'example_token_value'
-  };
+    const apiResponse = {
+      token: 'example_token_value'
+    };
 
-  const { token } = apiResponse;
+    const { token } = apiResponse;
 
-  setToken(token);
-}
+    setToken(token);
+  }
 
   return (
     <div>
@@ -29,8 +29,8 @@ const SignUpForm = ({ setToken }) => {
             onChange={(e) => setUsername(e.target.value)}
           />
         </label>
-        <br></br>
-        <br></br>
+        <br />
+        <br />
         <label>
           Password:{" "}
           <input
