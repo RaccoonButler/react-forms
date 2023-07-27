@@ -7,16 +7,22 @@ const SignUpForm = ({ setToken }) => {
 
   async function handleSubmit(event) {
     event.preventDefault();
-    console.log("Hello 👋");
 
-    const apiResponse = {
-      token: 'example_token_value'
-    };
-
-    const { token } = apiResponse;
-
-    setToken(token);
+    try {
+      const response = await fetch("https://fsa-jwt-practice.herokuapp.com/signup", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ username, password }),
+      });
+      const result = await response.json();
+      console.log(result);
+    } catch (error) {
+      setError(error.message);
+    }
   }
+
 
   return (
     <div>
