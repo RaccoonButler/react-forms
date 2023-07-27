@@ -3,6 +3,8 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 
 body {
@@ -20,7 +22,7 @@ body {
 h2 {
   margin-top: 20;
   margin-bottom: 20px;
-  color: rgb(145, 203, 209);
+  color: #61dcbb;
 }
 
 form {
@@ -29,20 +31,20 @@ form {
 }
 
 label {
-  margin-bottom: 10px;
+  margin-right: 10px;
   padding: 8px;
 }
 
 input {
   padding: 8px;
   margin-bottom: 15px;
-  border: 1px solid #ccc;
+  margin-left: 10px;
+  border: 1px solid #61dcbb;
   border-radius: 5px;
   font-size: 16px;
 }
 
 button {
-  padding: 15px 15px;
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -52,5 +54,10 @@ button {
 }
 
 button:hover {
-  background-color: #528aa4;
+  background-color: #52a477;
+}
+
+.error {
+  color: rgb(211, 56, 56);
+  font-size: 15px;
 }
